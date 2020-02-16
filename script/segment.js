@@ -62,3 +62,11 @@ function delete_segment(seg_last_tok_id){
     document.getElementById(seg_last_tok_id).style.display="inline";
 
 }
+
+function switch_direction(){
+	let dir = document.getElementById("select_dir").value;
+	document.getElementById("segment_canvas").style.direction = dir;
+	document.getElementById("segment_canvas").style.float = (dir == "rtl")? "right": "left";
+}
+
+

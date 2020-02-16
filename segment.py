@@ -161,8 +161,10 @@ def segment_main(user, admin, mode, **kwargs):
 	cpout += '<h2>Edit segmentation</h2>'
 	cpout += '**warning**'
 	cpout += '\t<div id="control">'
-	cpout += '\t<p>Document: <b>'+current_doc+'</b> (project: <i>'+current_project+'</i>)</p>'
-	cpout += '\t<div id="segment_canvas">'
+	cpout += '\t<p>Document: <b>'+current_doc+'</b> (project: <i>'+current_project+'</i>) '
+	cpout += 'Direction: <select id="select_dir" onchange="switch_direction()"><option value="ltr" selected="selected">left to right</option><option value="rtl">right to left</option></select>'
+	cpout += '</p>'
+	cpout += '\t<div id="segment_canvas" onload="switch_dir()">'
 
 	for row in rows:
 		if row[5] == "edu":

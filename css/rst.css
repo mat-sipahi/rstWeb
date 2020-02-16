@@ -120,13 +120,14 @@ h2 {	font-weight:bold;
 		transition-property: left;
 }
 #inner_canvas{
-		position:relative;
+	position:relative;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
-		height: calc(100% - 86px);
+	height: calc(100% - 86px);
+	overflow: scroll;
 }
 
 /* signal drawer classes */
@@ -329,12 +330,13 @@ select.rst_rel {
 .btn_tb td{vertical-align:top; background:transparent}
 
 #segment_canvas{background: white; border: 1px solid #666; cursor: text; overflow: auto;
+	float: left;
     padding: 2px;
     resize: both;
     width: 800px;}
-.seg{position: inline}
-.seg:not(#seg1):before{content:"\a0\a0";position:inline;float:left}
-.seg_end, .tok_space, .token{float:left; position: inline; font-family: Verdana, sans-serif; font-size:10pt;}
+.seg{position: inline; float: inherit; direction: inherit}
+.seg:not(#seg1):before{content:"\a0\a0";position:inline; float:inherit; direction: inherit}
+.seg_end, .tok_space, .token{float:inherit; direction: inherit; position: inline; font-family: Verdana, sans-serif; font-size:10pt;}
 .tok_space{cursor:pointer}
 .tok_space:hover{background-color:gray}
 .seg_end{font-weight: bold; color: green; cursor: pointer}
